@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TriSense API</title><link rel="stylesheet" href="./style.css"></head><body><div class="page prose"><h1>TriSense Studio 本地版 API</h1><p>此文档描述下载后运行的 Python 本地版；GitHub Pages 网页直接在浏览器中运算。API 默认位于 http://127.0.0.1:8765，无需密钥。只用于单机研究演示。</p><p><a href="./">返回工作台</a> · 下载并启动 Python 版后，在 /openapi.json 查看机器可读规范</p><article class="panel"><table><thead><tr><th>方法 / 路径</th><th>作用</th></tr></thead><tbody><tr><td>GET /api/health</td><td>版本、CPU 与模型文件状态</td></tr><tr><td>GET /api/research</td><td>历史实验汇总与评价协议</td></tr><tr><td>GET /api/samples</td><td>样本目录及本地可运行状态</td></tr><tr><td>GET /api/samples/S01</td><td>单条历史结果</td></tr><tr><td>POST /api/analyze</td><td>运行内置 / 本机样本，JSON 请求</td></tr><tr><td>POST /api/upload</td><td>运行上传 NPZ，multipart/form-data</td></tr><tr><td>GET /api/example</td><td>下载合成接口样例</td></tr></tbody></table></article><h2>分析参数</h2><pre>{
+  "sample_id": "synthetic",
+  "predictor": "q3",
+  "mode": "audio+vision",
+  "rate": 0.3,
+  "location": "middle"
+}</pre><p>predictor：q3 / ensemble；mode：none / audio / vision / audio+vision；rate：0–1；location：early / middle / late。上传接口使用同名表单字段，以 file 替代 sample_id。</p><h2>返回结果</h2><p>prediction：三类概率与强度；baseline：干预前输出；attribution：精确 Shapley、相对作用与守恒残差；features：可用性和显示用热图；local_effects：音视频滑窗遮挡；source / synthetic：来源标识。索引从 0 开始，窗口 stop 不包含在内。</p><h2>输入错误</h2><p>409：本地样本特征不存在；413：上传请求过大；415：扩展名不支持；422：数组、schema 或参数不符合接口。NPZ 内禁止对象数组，不加载不可信 pickle。完整字段约束见项目 docs/INPUT_FORMAT.md。</p></div></body></html>

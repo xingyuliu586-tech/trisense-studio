@@ -1,0 +1,842 @@
+[
+  {
+    "id": "S01",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 1,
+      "label": "中性",
+      "strength": 0.145773,
+      "confidence": 0.471351,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.234288,
+        -0.068403,
+        -0.029423
+      ],
+      "relative": [
+        0.705444,
+        0.205962,
+        0.088594
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "中性"
+    },
+    "evidence": {
+      "text_positions": "7-9",
+      "audio_seconds": "2.590-3.415",
+      "vision_seconds": "6.155-7.310",
+      "vision_frame": "203",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S02",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -0.020859,
+      "confidence": 0.346159,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        -0.258201,
+        0.131447,
+        0.158145
+      ],
+      "relative": [
+        0.471347,
+        0.239958,
+        0.288696
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "17-19",
+      "audio_seconds": "1.810-2.175",
+      "vision_seconds": "2.055-2.555",
+      "vision_frame": "70",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S03",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -0.361376,
+      "confidence": 0.526928,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.166705,
+        -0.046795,
+        0.092252
+      ],
+      "relative": [
+        0.54523,
+        0.15305,
+        0.30172
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "19-21",
+      "audio_seconds": "1.905-2.480",
+      "vision_seconds": "2.620-3.891",
+      "vision_frame": "99",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S04",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -0.180198,
+      "confidence": 0.504755,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.463661,
+        -0.23351,
+        -0.040162
+      ],
+      "relative": [
+        0.628835,
+        0.316696,
+        0.054469
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "23-25",
+      "audio_seconds": "2.055-2.545",
+      "vision_seconds": "0.000-1.010",
+      "vision_frame": "16",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S05",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 0.666072,
+      "confidence": 0.59414,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.206088,
+        -0.072399,
+        0.110107
+      ],
+      "relative": [
+        0.530343,
+        0.186309,
+        0.283348
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "1-3",
+      "audio_seconds": "1.695-2.659",
+      "vision_seconds": "2.320-3.264",
+      "vision_frame": "85",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S06",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 0.732909,
+      "confidence": 0.707149,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.439915,
+        0.12814,
+        -0.211249
+      ],
+      "relative": [
+        0.564497,
+        0.164429,
+        0.271074
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "13-15",
+      "audio_seconds": "1.905-2.445",
+      "vision_seconds": "1.905-2.445",
+      "vision_frame": "66",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S07",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 0.631739,
+      "confidence": 0.630065,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.401922,
+        -0.091182,
+        -0.031019
+      ],
+      "relative": [
+        0.766847,
+        0.173971,
+        0.059182
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "13-15",
+      "audio_seconds": "0.000-0.966",
+      "vision_seconds": "12.575-13.000",
+      "vision_frame": "385",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S08",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 1,
+      "label": "中性",
+      "strength": 0.138361,
+      "confidence": 0.541289,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.167869,
+        0.043509,
+        -0.004979
+      ],
+      "relative": [
+        0.775888,
+        0.201098,
+        0.023014
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "中性"
+    },
+    "evidence": {
+      "text_positions": "7-9",
+      "audio_seconds": "1.550-2.190",
+      "vision_seconds": "1.115-1.850",
+      "vision_frame": "45",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S09",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -2.611251,
+      "confidence": 0.982578,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.632804,
+        -0.150097,
+        0.185104
+      ],
+      "relative": [
+        0.65372,
+        0.155058,
+        0.191222
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "7-9",
+      "audio_seconds": "1.725-2.520",
+      "vision_seconds": "0.000-1.145",
+      "vision_frame": "18",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S10",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -1.281829,
+      "confidence": 0.891982,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.691046,
+        -0.181974,
+        0.068144
+      ],
+      "relative": [
+        0.734246,
+        0.19335,
+        0.072404
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "28-30",
+      "audio_seconds": "2.380-3.035",
+      "vision_seconds": "7.280-8.750",
+      "vision_frame": "241",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S11",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -1.053732,
+      "confidence": 0.792151,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.305643,
+        0.031513,
+        0.140228
+      ],
+      "relative": [
+        0.640246,
+        0.066011,
+        0.293743
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "3-5",
+      "audio_seconds": "0.712-3.070",
+      "vision_seconds": "3.600-4.350",
+      "vision_frame": "120",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S12",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -1.261032,
+      "confidence": 0.885565,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.171707,
+        0.077893,
+        0.321198
+      ],
+      "relative": [
+        0.300819,
+        0.136464,
+        0.562718
+      ],
+      "primary": "视觉",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "40-42",
+      "audio_seconds": "7.280-8.075",
+      "vision_seconds": "11.815-12.933",
+      "vision_frame": "372",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S13",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 1,
+      "label": "中性",
+      "strength": 0.27779,
+      "confidence": 0.525626,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.229318,
+        -0.038582,
+        0.0
+      ],
+      "relative": [
+        0.855984,
+        0.144016,
+        0.0
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "中性"
+    },
+    "evidence": {
+      "text_positions": "1-3",
+      "audio_seconds": "3.780-4.615",
+      "vision_seconds": "",
+      "vision_frame": "",
+      "vision_status": "视觉特征全零，无法归因"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S14",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 0.457712,
+      "confidence": 0.534977,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        -0.163853,
+        0.075375,
+        0.273112
+      ],
+      "relative": [
+        0.319813,
+        0.14712,
+        0.533067
+      ],
+      "primary": "视觉",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "9-11",
+      "audio_seconds": "1.355-1.985",
+      "vision_seconds": "6.985-7.892",
+      "vision_frame": "224",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S15",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 0.982782,
+      "confidence": 0.825641,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.267174,
+        0.290373,
+        -0.08225
+      ],
+      "relative": [
+        0.417592,
+        0.453852,
+        0.128556
+      ],
+      "primary": "语音",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "1-3",
+      "audio_seconds": "0.519-1.852",
+      "vision_seconds": "5.574-6.426",
+      "vision_frame": "181",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S16",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -2.358389,
+      "confidence": 0.976315,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.67977,
+        -0.020595,
+        0.002373
+      ],
+      "relative": [
+        0.967316,
+        0.029307,
+        0.003377
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "9-11",
+      "audio_seconds": "0.772-1.388",
+      "vision_seconds": "1.173-1.965",
+      "vision_frame": "48",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S17",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 1.135386,
+      "confidence": 0.873737,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.587383,
+        -0.017249,
+        -0.046741
+      ],
+      "relative": [
+        0.901761,
+        0.026481,
+        0.071758
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "11-13",
+      "audio_seconds": "8.635-9.633",
+      "vision_seconds": "1.440-2.685",
+      "vision_frame": "63",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S18",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -0.463965,
+      "confidence": 0.56621,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        -0.126849,
+        -0.054756,
+        0.433047
+      ],
+      "relative": [
+        0.206375,
+        0.089084,
+        0.704541
+      ],
+      "primary": "视觉",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "27-29",
+      "audio_seconds": "0.000-1.000",
+      "vision_seconds": "13.115-13.745",
+      "vision_frame": "404",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S19",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 0,
+      "label": "负向",
+      "strength": -0.048994,
+      "confidence": 0.504045,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.115417,
+        -0.159246,
+        0.233107
+      ],
+      "relative": [
+        0.227302,
+        0.313618,
+        0.45908
+      ],
+      "primary": "视觉",
+      "efficiency_error": null,
+      "target": "负向"
+    },
+    "evidence": {
+      "text_positions": "17-19",
+      "audio_seconds": "11.685-12.160",
+      "vision_seconds": "5.560-6.795",
+      "vision_frame": "186",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  },
+  {
+    "id": "S20",
+    "source": "recorded",
+    "predictor": "q3",
+    "synthetic": false,
+    "prediction": {
+      "class_id": 2,
+      "label": "正向",
+      "strength": 0.808803,
+      "confidence": 0.771073,
+      "probabilities": null
+    },
+    "attribution": {
+      "signed": [
+        0.387608,
+        0.120932,
+        -0.087811
+      ],
+      "relative": [
+        0.649966,
+        0.202787,
+        0.147247
+      ],
+      "primary": "文本",
+      "efficiency_error": null,
+      "target": "正向"
+    },
+    "evidence": {
+      "text_positions": "23-25",
+      "audio_seconds": "9.190-9.635",
+      "vision_seconds": "4.665-4.985",
+      "vision_frame": "146",
+      "vision_status": "可用"
+    },
+    "features": null,
+    "local_effects": {},
+    "baseline": null,
+    "notes": [
+      "原实验结果快照，尚未在当前界面执行推理。",
+      "原始视频、文本与特征不包含在公开仓库中。"
+    ]
+  }
+]

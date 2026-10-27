@@ -1,0 +1,66 @@
+{
+  "scope": "Synthetic compatibility checks only; not a re-evaluation of dataset performance.",
+  "cases": [
+    {
+      "checkpoint": "q2_baseline",
+      "mode": "none",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_robust",
+      "mode": "none",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q3_predictor",
+      "mode": "none",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_baseline",
+      "mode": "audio",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_robust",
+      "mode": "audio",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q3_predictor",
+      "mode": "audio",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_baseline",
+      "mode": "vision",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_robust",
+      "mode": "vision",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q3_predictor",
+      "mode": "vision",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_baseline",
+      "mode": "audio+vision",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q2_robust",
+      "mode": "audio+vision",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "checkpoint": "q3_predictor",
+      "mode": "audio+vision",
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "max_absolute_difference": 0.0
+}

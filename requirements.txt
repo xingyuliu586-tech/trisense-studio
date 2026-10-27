@@ -1,0 +1,6 @@
+# Python 3.10-3.12. CPU is sufficient; see README for the CPU-only Torch install.
+numpy>=1.26.4,<3
+torch>=2.6.0,<3
+fastapi==0.115.12
+uvicorn==0.34.2
+python-multipart==0.0.20

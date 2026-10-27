@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TriSense Studio：可在本机运行的多模态情感预测、缺失实验与解释工作台。">
+  <title>TriSense Studio · 多模态情感分析</title>
+  <link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="TriSense Studio 首页"><img src="/static/mark.svg" alt="" width="36" height="36"><span>TriSense<small>RESEARCH STUDIO</small></span></a>
+    <div class="nav-caption">工作空间</div>
+    <nav aria-label="主要导航">
+      <a href="#overview" data-page="overview"><svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>项目概览</a>
+      <a href="#analyze" data-page="analyze"><svg viewBox="0 0 24 24"><path d="M3 12h3l3-8 6 16 3-8h3"/></svg>分析工作台</a>
+      <a href="#experiments" data-page="experiments"><svg viewBox="0 0 24 24"><path d="M4 20V10m8 10V4m8 16v-7M2 21h20"/></svg>实验对比</a>
+      <a href="#method" data-page="method"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5zM8 9h8M8 13h8M8 17h5"/></svg>方法与使用</a>
+    </nav>
+    <div class="sidebar-note"><span class="mini-bars"><i></i><i></i><i></i></span><strong>文本 · 语音 · 视觉</strong><p>从特征融合到可检查的模型解释</p></div>
+    <div class="sidebar-foot"><span class="status-dot"></span><span id="connection">正在连接本地服务</span><small>v1.0.0 · CPU 推理 · 无云端调用</small></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><span class="muted">TriSense Studio</span><span class="slash">/</span><span id="breadcrumb">项目概览</span></div><span class="top-tag">多模态情感分析</span></header>
+    <div id="error" class="error-banner" role="alert" hidden></div>
+    <div id="loading" class="loading-panel" role="status">正在读取本地研究结果…</div>
+    <section id="page-overview" class="page" hidden>
+      <div class="page-intro"><div><div class="eyebrow">FROM RESEARCH TO INTERACTION</div><h1>让模型的判断，有据可查。</h1><p>融合文本、语音与视觉，探索缺失信息如何影响情感预测。</p></div><a class="button primary" href="#analyze">打开分析工作台 <span aria-hidden="true">↗</span></a></div>
+      <div class="provenance-line"><span class="tag">研究结果快照</span><span>以下为附件二内部验证集结果 · Q2 最终集成 · 非独立测试成绩</span></div>
+      <div id="metric-cards" class="metric-grid"></div>
+      <div class="overview-grid">
+        <article class="panel"><div class="panel-heading"><div><span class="eyebrow">MODEL BENCHMARK</span><h2>四种架构，同一评价协议</h2></div><a class="text-link" href="#experiments">完整实验 →</a></div><p class="panel-note">内部验证 MAE · 越低越好 · 3 个随机种子均值及标准差</p><div id="home-benchmark" class="chart"></div><p class="caption">来源：原实验 comparison/summary.csv。四模型对比未使用缺失增强，与上方最终集成属于不同实验。</p></article>
+        <article class="panel journey"><div class="panel-heading"><div><span class="eyebrow">RESEARCH PIPELINE</span><h2>三步走近预测依据</h2></div></div><ol><li><span>01</span><div><strong>提取与对齐</strong><p>BERT 语义、声学特征与面部动作，按时间区间聚合。</p><small>100 条视频 · 1,919 个有效位置</small></div></li><li><span>02</span><div><strong>缺失感知融合</strong><p>可用性掩码与动态门控，联合预测情感类别和强度。</p><small>3,395 条训练 · 728 条验证</small></div></li><li><span>03</span><div><strong>贡献与局部证据</strong><p>8 种模态组合的精确 Shapley，结合滑窗遮挡解释。</p><small>20 条专项样本 · 无真实标签</small></div></li></ol></article>
+      </div>
+      <div class="callout"><div class="callout-icon">i</div><div><strong>两种数据入口，清楚标明来源</strong><p>可直接浏览真实实验的数值记录；导入兼容 NPZ 后使用已训练模型实时计算。随仓库提供的随机合成样例只用于验证接口，不用于评价识别性能。</p></div></div>
+    </section>
+    <section id="page-analyze" class="page" hidden>
+      <div class="page-intro compact"><div><div class="eyebrow">ANALYSIS WORKSPACE</div><h1>分析工作台</h1><p>选择样本、叠加音视频缺失，观察预测和模态贡献的变化。</p></div><div class="export-actions"><button id="export-json" class="button" disabled>导出 JSON</button><button id="export-csv" class="button" disabled>导出 CSV</button></div></div>
+      <div class="analysis-grid">
+        <aside class="panel controls"><div class="panel-heading"><h2>输入与参数</h2><span class="small-tag">本地计算</span></div>
+          <fieldset id="controls-fieldset"><label for="sample">样本来源</label><select id="sample" aria-label="样本来源"></select><p id="sample-hint" class="hint"></p>
+          <label class="upload-box" for="file"><svg viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 15v6h16v-6"/></svg><strong id="upload-title">导入自己的特征</strong><span>单样本 .npz · 最大 8 MB</span><input id="file" type="file" accept=".npz"></label><button id="clear-file" class="text-link clear-file" type="button" hidden>取消文件，返回样本库</button>
+          <label for="predictor">预测模型</label><select id="predictor"><option value="q3">Q3 · 单模型解释器</option><option value="ensemble">Q2 · 双模型加权集成</option></select><p class="hint">Q2：75% 基线 + 25% 缺失增强；Q3：独立训练的预测器。</p>
+          <div class="control-divider"></div><label for="missing-mode">叠加缺失模态</label><select id="missing-mode"><option value="none">保持原始输入</option value="audio">语音</option><option value="vision">视觉</option><option value="audio+vision">语音 + 视觉</option></select>
+          <div class="range-label"><label for="rate">内容位置缺失比例</label><output id="rate-value" for="rate">30%</output></div><input id="rate" type="range" min="0" max="100" step="10" value="30"><div class="range-ends"><span>0%</span><span>100%</span></div>
+          <label for="location">缺失位置</label><select id="location"><option value="early">起始片段</option><option value="middle" selected>中间片段</option><option value="late">末尾片段</option></select>
+          <button id="analyze" class="button primary run-button">运行分析</button><button id="try-synthetic" class="button secondary" type="button">使用合成样例试运行</button>
+          </fieldset><p class="hint bottom-note">局部文本遮挡需要重新运行 BERT，本版本的实时干预仅面向语音和视觉。<a href="/api/example">下载接口样例</a></p>
+        </aside>
+        <div class="analysis-output"><div id="result-banner" class="result-banner" role="status" aria-live="polite"></div>
+          <article class="panel"><div class="panel-heading"><div><span class="eyebrow">SENTIMENT PREDICTION</span><h2>情感预测</h2></div><span id="result-source" class="tag"></span></div><div id="prediction" class="prediction-content"></div></article>
+          <div class="result-grid"><article class="panel"><div class="panel-heading"><div><span class="eyebrow">MODALITY CONTRIBUTION</span><h2>哪些信息影响了判断</h2></div></div><div id="attribution"></div><p class="caption">解释当前预测类别的概率。正值表示支持，负值表示抑制；相对作用程度按贡献绝对值归一化。</p></article>
+          <article class="panel"><div class="panel-heading"><div><span class="eyebrow">CONTROLLED COMPARISON</span><h2>干预前后</h2></div></div><div id="intervention"></div></article></div>
+          <article class="panel"><div class="panel-heading"><div><span class="eyebrow">ALIGNED FEATURE VIEW</span><h2>特征与可用性</h2></div><div class="segmented" aria-label="热图模态"><button data-heatmap="text">文本</button><button data-heatmap="audio" class="selected">语音</button><button data-heatmap="vision">视觉</button></div></div><div id="feature-status"></div><canvas id="mask-canvas" aria-label="三模态各位置可用性图" role="img"></canvas><canvas id="heatmap-canvas" aria-label="标准化特征热图" role="img"></canvas><p id="heatmap-note" class="caption"></p></article>
+          <article class="panel"><div class="panel-heading"><div><span class="eyebrow">LOCAL OCCLUSION</span><h2>局部窗口的影响</h2></div><span class="small-tag">3 位置滑窗</span></div><div id="local-chart" class="chart"></div><p class="caption">纵轴：遮挡前后当前类别概率之差；横轴：窗口起始词元索引。仅在有效内容位置扫描，排除 CLS / SEP。此图为模型响应，不表示因果效应。</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="page-experiments" class="page" hidden>
+      <div class="page-intro compact"><div><div class="eyebrow">EXPERIMENT EXPLORER</div><h1>让结果接受对比</h1><p>浏览同一训练协议下的架构实验与缺失压力测试。</p></div><span class="tag">已完成实验 · 只读快照</span></div>
+      <div class="experiment-grid"><article class="panel"><div class="panel-heading"><h2>架构表现</h2><select id="metric-select" aria-label="评价指标"><option value="mae">MAE · 越低越好</option><option value="f1_macro">Macro-F1 · 越高越好</option><option value="accuracy">Accuracy · 越高越好</option><option value="pearson">Pearson · 越高越好</option></select></div><div id="comparison-chart" class="chart"></div></article><article class="panel"><div class="panel-heading"><h2>缺失压力测试</h2><span class="small-tag">内容位置 30%</span></div><div id="stress-chart" class="chart"></div></article></div>
+      <article class="panel"><div class="panel-heading"><h2>完整指标</h2><span class="muted">均值 ± 样本标准差 · n = 3 个种子</span></div><div id="comparison-table" class="table-wrap"></div><p class="caption">参数量仅计算下游网络，不包含冻结 BERT。训练耗时与运行环境有关，不用于跨设备性能比较。</p></article>
+      <div class="experiment-grid bottom-grid"><article class="panel"><div class="panel-heading"><h2>训练过程</h2><span class="small-tag">Q2 两个检查点</span></div><div id="learning-chart" class="chart"></div><p class="caption">内部验证集 Macro-F1，基线与缺失增强版分别早停；曲线不是四模型多种子的训练平均。</p></article><article class="panel"><div class="panel-heading"><h2>协议与结论边界</h2></div><div id="protocol"></div></article></div>
+    </section>
+    <section id="page-method" class="page" hidden>
+      <div class="page-intro compact"><div><div class="eyebrow">METHOD & REPRODUCIBILITY</div><h1>方法透明，结果可复查</h1><p>了解模型如何计算，以及这个软件可以回答哪些问题。</p></div></div>
+      <article class="panel method-flow"><div class="panel-heading"><h2>实时推理路径</h2><span class="tag">无需在线模型服务</span></div><div class="flow"><div><small>INPUT</small><strong>对齐特征</strong><span>50 × (768, 74, 35)</span></div><b>→</b><div><small>FUSION</small><strong>掩码门控</strong><span>统一投影到 96 维</span></div><b>→</b><div><small>TEMPORAL</small><strong>时序与池化</strong><span>残差卷积 + 双池化</span></div><b>→</b><div><small>OUTPUT</small><strong>分类与回归</strong><span>三类极性 / −3 到 +3</span></div></div><p class="caption">精确 Shapley 枚举 8 种模态组合，解释固定预测类别的概率。解释器也支持对 Q2 集成进行新计算；历史解释记录来自 Q3 独立模型。</p></article>
+      <div class="experiment-grid bottom-grid"><article class="panel prose"><h2>如何开始</h2><ol><li>进入分析工作台，浏览 20 条真实实验数值记录。</li><li>点击“使用合成样例试运行”，验证本机推理与导出流程。</li><li>上传符合接口的 NPZ，或用 scripts/import_local.py 导入你有权使用的附件四数据。</li><li>选择模型和音视频遮挡范围，点击运行，导出 JSON 或 CSV。</li></ol><a class="button" href="/api/example">下载合成 NPZ 样例</a></article>
+      <article class="panel prose"><h2>输入接口</h2><dl><dt>schema</dt><dd>mosei-aligned-50-v1</dd><dt>text / audio / vision</dt><dd>50×768 / 50×74 / 50×35 数值数组</dd><dt>text_bert</dt><dd>3×50 整数数组：token ID、attention mask、segment ID</dd><dt>格式与边界</dt><dd>单样本 NPZ，≤8 MB；有限数值，禁止对象数组。输入须保持题给特征语义与标准化前尺度。</dd></dl></article></div>
+      <article class="panel prose bottom-grid"><h2>使用范围</h2><ul><li>软件接收兼容的预提取特征。当前不支持上传任意视频后直接给出可靠情感预测，也不把第一问自提取特征直接套入第二问模型。</li><li>内部验证集参与早停与模型选择；展示的性能不等于对外部数据的泛化保证。</li><li>类别概率没有经过校准；Shapley 与局部遮挡解释的是模型，不是人的心理因果关系。</li><li>比赛原始数据、转写文本和视频不随公开仓库发布。上传文件只在内存中处理，软件不向外部服务发送数据。</li><li>服务默认仅监听 127.0.0.1；没有账户系统，不应直接作为公网服务部署。</li></ul><div class="docs-links"><a href="/docs" target="_blank" rel="noopener">本地 API 文档 ↗</a><span>更多复现、许可与数据说明见项目 README 和 docs/。</span></div></article>
+    </section>
+    <footer>TriSense Studio <span>·</span> 从数学建模实验到可运行的研究软件 <span>·</span> 本地推理 / 可追溯结果</footer>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "snapshot_date": "2026-10-27",
+  "checkpoints": {
+    "q2_baseline.pt": "74dcc1aad045b1eab0c52bc63980bebcf6feb0126e9abd78bad9e359cd3de737",
+    "q2_robust.pt": "9a4302f431ca0a4219fcc4861f8551a678df0c579426ae440e9b685b3eca7e05",
+    "q3_predictor.pt": "e4ca780698251333ba4a32dc472d5016e5ab88e0d2609696603fef2979a94a27"
+  },
+  "source_hashes": {
+    "q1/audit.json": "771d538aad783acf6cfaaf2e33b06fc2e6431aacc9e089b0bf225454c50ec4ba",
+    "q2/config.json": "b4466d6592173effd7081bc28cc2c3da492db1837216eaa7c7a88b1c5dc86f39",
+    "q2/metrics.json": "004c1f19376f0a80e1ec32f2477e3d6b7caac5bb60b5f666b7b336ae94ca4e46",
+    "q3/metrics.json": "131ef87f94a7e4481602b14e404e3051bb4111d8a60641c4dbb94407785499b1",
+    "q3/附件4_第三题预测与解释.csv": "d9dcf72f79dddb8d4696d511bf1015d24a579a0e8d4a34fe6b1d6c65525a4dff",
+    "paper/comparison/summary.csv": "8bafdbcde62f2051d4a022b9eb89201a8db76501f553043f1e92333e393ee072",
+    "paper/comparison/stress_summary.csv": "c55018341559fe51eb4410002b7a6edc842f84ad90f3121a767a38c4f8b2479e",
+    "paper/comparison/protocol.json": "2f9a6e96c71c8f33d5756e178d8fb18a4bd29602ebec955430af082fb4599f1d"
+  },
+  "policy": "Only derived numeric results, experiment settings and own trained checkpoints. No original dataset is redistributed."
+}
